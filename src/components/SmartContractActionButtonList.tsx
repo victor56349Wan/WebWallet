@@ -55,21 +55,7 @@ export const SmartContractActionButtonList = () => {
       }
     }, [isSuccess])
 
-    const handleReadSmartContract = async () => {
-      console.log("Read Sepolia Smart Contract");
-      const { data } = await readContract.refetch();
-      console.log("data: ", data)
-    }
-
-    const handleWriteSmartContract = () => {
-        console.log("Write Sepolia Smart Contract")
-        writeContract({
-          address: storageSC,
-          abi: storageABI,
-          functionName: 'store',
-          args: [123n],
-        })
-    }
+ 
 
 
   return (
